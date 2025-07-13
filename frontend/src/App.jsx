@@ -16,7 +16,12 @@ Setpassword(e.target.value)
     e.preventDefault()
     console.log({username,password})
     try
-    {const res = await axios.post('https://opulent-space-cod-4jwpx7wwv95x35rjg-5000.app.github.dev/user/sign-up', {username,password})
+    {const res = await axios.post('https://stunning-meme-jjqpx5qq79r9frg6-5000.app.github.dev/user/sign-up', {username,password}, {
+  headers: {
+    'Content-Type': 'application/json'
+  }
+}
+)
     console.log(res.data)
   }
   catch(err){
